@@ -98,10 +98,10 @@ $(document).ready(function(){
 	play.on('touchend',function(){
 		if(audio.paused){
 			audio.play();
-			play.html('&#xe696;');
+			play.html('<img src="img/pause.png" alt="" />');
 		}else{
 			audio.pause();
-			play.html('&#xe649;');
+			play.html('<img src="img/play.png" alt="" />');
 		}
 	});
 	
@@ -152,7 +152,7 @@ $(document).ready(function(){
 			$(this).attr('data-v',audio.volume);
 			audio.volume=0;
 		}
-		no.html('&#xe61d;')
+		no.html('<img src="img/no.png" alt="" />')
 	});
 
 	
@@ -182,7 +182,7 @@ $(document).ready(function(){
 	//收藏
 	var like=$('.like')
 	$('.like').on('touchend',function(){
-		$('.like').html('&#xe628;')
+		$('.like').html('<img src="img/like2.png" alt="" />')
 	})
 	//播放列表
 	$(".lists").on("touchend","li",function(){
@@ -243,7 +243,7 @@ $(document).ready(function(){
 		console.log(Time(audio.currentTime))
 		var left=progress.width() * audio.currentTime / audio.duration - p_i.width() / 2;
 		p_i.css('left',left)
-        //最終時間
+        //最终时间
         console.log('play')
     })
     $(audio).on("pause",function(){
